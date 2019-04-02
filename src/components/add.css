@@ -36,3 +36,18 @@ input{
     font-style: bold;
     font-size: 1.3em;
 }
+
+@media(max-width : 600px){
+    .newdata{
+        width: 100%;
+    }
+    .AddSub{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .addbtn{
+        flex:2;
+        height: 20%;
+    }
+}

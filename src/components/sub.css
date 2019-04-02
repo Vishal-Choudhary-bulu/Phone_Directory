@@ -36,3 +36,21 @@
     font-style: bold;
     font-size: 1.3em;
 }
+
+
+@media (max-width : 600px){
+    .subDiv{
+        padding:3px 5px;
+    }
+    h3{
+        font-size: 1em;
+    }
+    .delbtn{
+        font-size: 0.8em;
+    }
+    .listSubName, .listSubPhone{
+        font-size: 0.8em;
+        font-weight: bold;
+        font-family: courier;
+    }
+}
