@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Title from './components/title';
 import Add from './components/Add';
+import Sublist from './components/Sublist';
 
 
 
@@ -13,6 +14,7 @@ class App extends Component {
       <div className="App">
         <Title/>
         <Add />
+        <Sublist />
       </div>
     );
   }
