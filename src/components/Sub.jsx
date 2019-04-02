@@ -6,8 +6,8 @@ class Sub extends Component {
     render() {
         return (
             <div className = "subDiv">
-                <p className="listSubName" >NAME : {this.props.Name} </p> 
-                <p className = "listSubPhone"> PHONE : {this.props.Phone}</p>
+                <p className="listSubName" >{this.props.Name} </p> 
+                <p className="listSubPhone"> &#9742;  {this.props.Phone}</p>
                 <button className="delbtn">DELETE</button>
             </div>
         )

@@ -12,6 +12,7 @@ class Add extends Component {
 
         this.ChangeName = this.ChangeName.bind(this);
         this.ChangePhone = this.ChangePhone.bind(this);
+        this.submitted = this.submitted.bind(this);
     }
     ChangeName(e){
         this.setState({Name: e.target.value});
@@ -19,6 +20,10 @@ class Add extends Component {
 
     ChangePhone(e){
         this.setState({Phone: e.target.value});
+    }
+
+    submitted(){
+        console.log(this.state);
     }
     
     render() {
@@ -32,7 +37,7 @@ class Add extends Component {
                     <h3>Phone : </h3>
                     <input type="Number" value={this.state.Phone} onChange={this.ChangePhone}/><br />
                 </div>
-                <input type="submit" value="ADD" className="addbtn"/>
+                <button className="addbtn" onClick = {this.submitted}>ADD</button>
             </div>
         )
     }

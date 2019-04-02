@@ -10,7 +10,7 @@ class Sublist extends Component {
             subs : [
                 { Name: 'ram', Phone: '10101010' },
                 { Name: 'sam', Phone: '11111111' },
-                { Name: 'ram', Phone: '20202020' }
+                { Name: 'dam', Phone: '20202020' }
             ]
         }
     }
