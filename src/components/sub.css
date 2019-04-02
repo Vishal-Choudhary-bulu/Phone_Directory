@@ -1,9 +1,9 @@
 .subDiv{
     display:flex;
-    justify-content: space-around;
+    padding :3px 30px;
+    justify-content: stretch;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.164);
-    padding:1px;
     margin:1px;
     border-radius: 1px;
 }
@@ -11,12 +11,14 @@
 .listSubName{
     opacity: 1;
     padding:2px;
+    flex:3;
     margin:0;
     color: aquamarine;
     text-transform: uppercase;
 }
 .listSubPhone{
     opacity: 1;
+    flex:3;
     padding:2px;
     margin:0;
     color:orange;
@@ -25,6 +27,7 @@
 .delbtn{
     border:none;
     outline:none;
+    flex: 1;
     color:rgb(145, 3, 3);
     background-color: rgb(250, 87, 87);
     width:15%;

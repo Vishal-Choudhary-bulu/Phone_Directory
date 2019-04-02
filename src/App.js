@@ -12,10 +12,14 @@ class App extends Component {
 
   state = {
     subs: [
-      { Name: 'ram', Phone: '10101010', id: 1 },
-      { Name: 'sam', Phone: '11111111', id: 2 },
-      { Name: 'dam', Phone: '20202020', id: 3 }
+      { Name: 'Add', Phone: '00000000', id: 1 },
+      { Name: 'And', Phone: '11111111', id: 2 },
+      { Name: 'Delete', Phone: '22222222', id: 3 }
     ]
+  }
+
+  Delete = (id) => {
+    this.setState({subs : [...this.state.subs.filter(sub => sub.id !== id)]})
   }
 
   AddSub = (Name,Phone)=>{
@@ -29,7 +33,7 @@ class App extends Component {
       <div className="App">
         <Title/>
         <Add AddSub = {this.AddSub}/>
-        <Sublist subs = {this.state.subs}/>
+        <Sublist subs = {this.state.subs} Delete = {this.Delete} />
       </div>
     );
   }

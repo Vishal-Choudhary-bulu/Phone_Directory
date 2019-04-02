@@ -4,18 +4,15 @@ import './sub.css';
 
 class Sub extends Component {
     render() {
+        const {Name, Phone, id} = this.props.sub;
         return (
             <div className = "subDiv">
-                <p className="listSubName" >{this.props.Name} </p> 
-                <p className="listSubPhone"> &#9742;  {this.props.Phone}</p>
-                <button className="delbtn">DELETE</button>
+                <p className="listSubName" >{Name} </p> 
+                <p className="listSubPhone"> &#9742;  {Phone}</p>
+                <button className="delbtn" onClick = {this.props.Delete.bind(this,id)}>DELETE</button>
             </div>
         )
     }
-}
-Sub.defaultProps = {
-    Name: "New Subscriber",
-    Phone: "0000000"
 }
 
 export default Sub;

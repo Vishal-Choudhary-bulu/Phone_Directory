@@ -9,7 +9,7 @@ class Sublist extends Component {
         return (
             <div className = "subList">
                 <h3>---list of subscribers---</h3>
-                {this.props.subs.map((s,i)=> <Sub Name = {s.Name} Phone = {s.Phone} key = {s.id}/>)}
+                {this.props.subs.map((sub) => <Sub key={sub.id} sub = {sub} Delete = {this.props.Delete}/>)}
             </div>
         )
     }
