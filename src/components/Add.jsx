@@ -3,27 +3,19 @@ import React, { Component } from 'react';
 import './add.css';
 
 class Add extends Component {
-    constructor(){
-        super();
-        this.state = {
-            Name : "",
-            Phone : ""
-        }
-
-        this.ChangeName = this.ChangeName.bind(this);
-        this.ChangePhone = this.ChangePhone.bind(this);
-        this.submitted = this.submitted.bind(this);
+    
+    state = {
+        Name: "",
+        Phone: ""
     }
-    ChangeName(e){
-        this.setState({Name: e.target.value});
+    
+    onChange = (e) => {
+        this.setState({ [e.target.name] : e.target.value})
     }
 
-    ChangePhone(e){
-        this.setState({Phone: e.target.value});
-    }
-
-    submitted(){
-        console.log(this.state);
+    submitted = (e) => {
+        this.props.AddSub(this.state.Name,this.state.Phone);
+        this.setState({Name: "",Phone: ""});
     }
     
     render() {
@@ -31,11 +23,11 @@ class Add extends Component {
             <div className = "AddSub">
                 <div className = "newdata">
                     <h3>Name : </h3> 
-                    <input type="text" value = {this.state.Name} onChange = {this.ChangeName}/><br/>
+                    <input type="text" name = "Name" value = {this.state.Name} onChange = {this.onChange}/><br/>
                 </div>
                 <div className="newdata">
                     <h3>Phone : </h3>
-                    <input type="Number" value={this.state.Phone} onChange={this.ChangePhone}/><br />
+                    <input type="Number" name="Phone" value = {this.state.Phone} onChange={this.onChange}/><br />
                 </div>
                 <button className="addbtn" onClick = {this.submitted}>ADD</button>
             </div>
