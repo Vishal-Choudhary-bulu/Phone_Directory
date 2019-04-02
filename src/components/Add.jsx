@@ -6,8 +6,8 @@ class Add extends Component {
     constructor(){
         super();
         this.state = {
-            Name : "new subscriber",
-            Phone : "0000000"
+            Name : "",
+            Phone : ""
         }
 
         this.ChangeName = this.ChangeName.bind(this);
@@ -23,13 +23,16 @@ class Add extends Component {
     
     render() {
         return (
-            <div>
-                <label> Enter the name of the new subscriber : 
-                    <input type="text" value = {this.state.Name} onChange = {this.ChangeName}/>
-                    </label><br/><br/>
-                <label> Phone Number :
-                    <input type="Number" value={this.state.Phone} onChange={this.ChangePhone}/>
-                </label><br /><br/>
+            <div className = "AddSub">
+                <div className = "newdata">
+                    <h3>Name : </h3> 
+                    <input type="text" value = {this.state.Name} onChange = {this.ChangeName}/><br/>
+                </div>
+                <div className="newdata">
+                    <h3>Phone : </h3>
+                    <input type="Number" value={this.state.Phone} onChange={this.ChangePhone}/><br />
+                </div>
+                <input type="submit" value="ADD" className="addbtn"/>
             </div>
         )
     }

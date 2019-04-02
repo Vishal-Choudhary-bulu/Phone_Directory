@@ -1,0 +1,38 @@
+.AddSub{
+    width:100%;
+    display: flex;
+    background-color: rgb(255, 249, 198);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.newdata{
+    width:40%;
+    padding:5px;
+}
+h3{
+    display: inline;
+    color:rgb(4, 0, 255);
+    font-family: monospace;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+input{
+    border: 2px solid black;
+    border-radius:5px;
+    outline: none;
+    padding:5px;
+}
+
+.addbtn{
+    border:none;
+    outline:none;
+    color:green;
+    background-color: rgb(197, 243, 197);
+    width:15%;
+    height:90%;
+    font-family: monospace;
+    font-style: bold;
+    font-size: 1.3em;
+}
